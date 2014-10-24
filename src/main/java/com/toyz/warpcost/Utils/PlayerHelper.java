@@ -2,6 +2,7 @@ package com.toyz.warpcost.Utils;
 
 import com.toyz.warpcost.Main;
 import org.apache.commons.lang.StringUtils;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -13,8 +14,12 @@ import java.util.*;
  */
 public class PlayerHelper {
     public static String MessageBuilder(String message, String name, ConfigurationSection cs){
-        message = message.replace("%cost%", cs.getInt("cost") + "").replace("%name%", name).replace("%item%", StringUtils.capitalize(cs.getString("item").replace("_", " ")));
-        return message;
+        if(!cs.getBoolean("free")) {
+            message = message.replace("%cost%", cs.getInt("cost") + "").replace("%name%", name).replace("%item%", StringUtils.capitalize(cs.getString("item").replace("_", " ")));
+        }else{
+            message = message.replace("%name%", name);
+        }
+        return ChatColor.translateAlternateColorCodes('&', message);
     }
 
     public static void CreateAndOpenInventory(Player player) {

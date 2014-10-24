@@ -6,6 +6,7 @@ import com.toyz.warpcost.BaseCommand.Commands.FreeWarp;
 import com.toyz.warpcost.BaseCommand.Commands.Warp;
 import com.toyz.warpcost.BaseCommand.Commands.WarpPrice;
 import com.toyz.warpcost.BaseCommand.ICommand;
+import com.toyz.warpcost.Events.InventoryClick;
 import com.toyz.warpcost.Utils.ConfigAccessor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -55,6 +56,9 @@ public class Main extends JavaPlugin {
             Map.Entry pairs = (Map.Entry)it.next();
             getCommand((String) pairs.getKey()).setExecutor(bsc);
         }
+
+        //Listners
+        getServer().getPluginManager().registerEvents(new InventoryClick(), this);
     }
 
     public void onDisable(){
