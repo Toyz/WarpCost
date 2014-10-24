@@ -1,0 +1,19 @@
+name: WarpCost
+main: com.toyz.warpcost.Main
+version: 1.0
+author: Toyz
+description: A simple warp plugin which allows you to charge certain item as currency to get to the location
+commands:
+  warp:
+    description: Go to a certain warped location
+  setwarpprice:
+    description: Go to a certain warped location
+    aliases: [makewarp, createwarp, pricewarp]
+
+permissions:
+  warp.make:
+    description: Allows the user with this perm to make a warp
+    default: op
+  warp.go:
+    description: Allows the user to use the warp command
+    default: op

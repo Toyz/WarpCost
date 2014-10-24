@@ -1,0 +1,4 @@
+prefix: "[WarpCost]"
+messages:
+  cantafford: "Warp &1%name%&f cost %cost% %item%"
+  go: "Warped to &1%name%&f for %cost% %item%"
