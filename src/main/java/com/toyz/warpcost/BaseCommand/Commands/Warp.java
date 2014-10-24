@@ -74,29 +74,6 @@ public class Warp extends BaseCommand implements ICommand {
                     }
                 }
             }
-            /*for (int i = 0; i > player.getInventory().getSize(); i++) {
-                ItemStack itm = player.getInventory().getItem(i);
-                if (itm.getType().equals(m)) {
-                    if (itm.getAmount() >= cs.getInt("cost")) {
-                        int a = itm.getAmount() - cs.getInt("cost");
-
-                        if(a == 0)
-                            player.getInventory().remove(itm);
-                        else{
-                            player.getInventory().getItem(i).setAmount(a);
-                        }
-
-                        player.updateInventory();
-                        String[] s = cs.getString("loc").split(",");
-                        player.teleport(new Location(Main.getPlugin().getServer().getWorld(s[3]), Double.parseDouble(s[0]), Double.parseDouble(s[1]), Double.parseDouble(s[2])));
-                        break;
-                    } else {
-                        sendMessage("This warp cost: " + cs.getInt("cost") + " " + StringUtils.capitalize(cs.getString("item").replace("_", " ").toLowerCase()));
-                        break;
-                    }
-
-                }
-            }*/
             return;
         }
 
