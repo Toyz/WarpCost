@@ -7,12 +7,23 @@ commands:
   warp:
     description: Go to a certain warped location
   setwarpprice:
-    description: Go to a certain warped location
+    description: Create a warp that cost in-game item
     aliases: [makewarp, createwarp, pricewarp]
+  setwarp:
+    description: Create a free warp
+    aliases: [freewarp, setw, sw]
+  delwarp:
+    description: Delete a warp
 
 permissions:
-  warp.make:
+  warp.make.free:
+    description: Allows the user to create a free warp
+    default: op
+  warp.make.cost:
     description: Allows the user with this perm to make a warp
+    default: op
+  warp.remove:
+    description: Allows the user to delete a warp
     default: op
   warp.go:
     description: Allows the user to use the warp command

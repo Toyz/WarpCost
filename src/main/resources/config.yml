@@ -1,4 +1,8 @@
 prefix: "[WarpCost]"
+usegui: false
+guisize: 6
+
 messages:
   cantafford: "Warp &1%name%&f cost %cost% %item%"
-  go: "Warped to &1%name%&f for %cost% %item%"
+  gocost: "Warped to &1%name%&f for %cost% %item%"
+  gofree: "Warped to &1%name%&f"
